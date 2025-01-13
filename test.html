@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FAQ Section</title>
+      <style>
+            body {
+                  font-family: Arial, sans-serif;
+                  margin: 0;
+                  padding: 0;
+                  background-color: #f9f9f9;
+            }
+
+            .faq-container {
+                  max-width: 1200px;
+                  margin: 40px auto;
+                  padding: 20px;
+            }
+
+            .faq-header {
+                  text-align: left;
+                  margin-bottom: 20px;
+            }
+
+            .faq-header h1 {
+                  font-size: 36px;
+                  color: #2e4b2d;
+                  margin: 0;
+            }
+
+            .faq-header p {
+                  font-size: 16px;
+                  color: #666;
+            }
+
+            .faq-list {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+            }
+
+            .faq-item {
+                  border: 1px solid #e0e0e0;
+                  border-radius: 8px;
+                  margin-bottom: 10px;
+                  overflow: hidden;
+            }
+
+            .faq-question {
+                  background-color: #fff;
+                  padding: 15px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  cursor: pointer;
+                  font-size: 16px;
+                  font-weight: bold;
+            }
+
+            .faq-question:hover {
+                  background-color: #f0f0f0;
+            }
+
+            .faq-answer {
+                  display: none;
+                  padding: 15px;
+                  background-color: #f5ffe5;
+                  font-size: 14px;
+                  color: #333;
+            }
+
+            .faq-item.active .faq-question {
+                  background-color: #d4f8b2;
+            }
+
+            .faq-item.active .faq-answer {
+                  display: block;
+            }
+
+            .arrow {
+                  font-size: 16px;
+                  color: #666;
+                  transition: transform 0.2s ease;
+            }
+
+            .faq-item.active .arrow {
+                  transform: rotate(180deg);
+            }
+      </style>
+</head>
+
+<body>
+      <div class="faq-container">
+            <div class="faq-header">
+                  <h1>Got questions? We've got answers</h1>
+                  <p>Explore our FAQs to learn more about how Intense Team can streamline your workflow and boost
+                        productivity.</p>
+            </div>
+            <ul class="faq-list">
+                  <li class="faq-item">
+                        <div class="faq-question">
+                              <span>1. What is Intense Team and how does it work?</span>
+                              <span class="arrow">&#x25BC;</span>
+                        </div>
+                        <div class="faq-answer">
+                              Intense Team is a platform designed to enhance team productivity by providing tools for
+                              task management, real-time monitoring, and analytics.
+                        </div>
+                  </li>
+                  <li class="faq-item">
+                        <div class="faq-question">
+                              <span>2. How do I get started with Intense Team?</span>
+                              <span class="arrow">&#x25BC;</span>
+                        </div>
+                        <div class="faq-answer">
+                              Getting started is easy! Sign up on our website, create your team, and start managing
+                              tasks and tracking progress right away.
+                        </div>
+                  </li>
+                  <li class="faq-item">
+                        <div class="faq-question">
+                              <span>3. What kind of customer support is available?</span>
+                              <span class="arrow">&#x25BC;</span>
+                        </div>
+                        <div class="faq-answer">
+                              We offer 24/7 customer support through chat, email, and phone to help you with any issues
+                              or questions.
+                        </div>
+                  </li>
+                  <li class="faq-item active">
+                        <div class="faq-question">
+                              <span>4. How does Intense Team help improve team productivity?</span>
+                              <span class="arrow">&#x25B2;</span>
+                        </div>
+                        <div class="faq-answer">
+                              Intense Team enhances productivity by providing real-time monitoring, task management, and
+                              performance analytics in one platform. By tracking live activities, work hours, and
+                              engagement levels, teams can identify bottlenecks and improve workflows. With tools like
+                              customizable dashboards and inactivity alerts, your team stays focused, organized, and on
+                              track to meet deadlines.
+                        </div>
+                  </li>
+            </ul>
+      </div>
+
+      <script>
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                  item.addEventListener('click', () => {
+                        faqItems.forEach(i => i.classList.remove('active'));
+                        item.classList.toggle('active');
+                  });
+            });
+      </script>
+</body>
+
+</html>
